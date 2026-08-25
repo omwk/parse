@@ -15,3 +15,9 @@
 - [x] 移除页面公开邮箱与联系入口
 - [x] 清理相关帮助文案和 SEO 文案
 - [x] 完成静态引用检查
+
+## 当前任务：修复 Cloudflare 部署失败
+
+- [x] 根据构建日志确认 Next/OpenNext 构建成功，失败点为 `wrangler: not found`
+- [x] 将 Wrangler 声明为根项目开发依赖
+- [x] 保留已有锁文件 Wrangler 依赖树，避免无关依赖升级
