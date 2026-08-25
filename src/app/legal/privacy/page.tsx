@@ -64,7 +64,7 @@ export default function PrivacyPage() {
 
       <h2>五、你的权利</h2>
       <p>由于我们不长期存储你的个人数据，你无需主动行使删除权——内存缓存会在短时间内自动失效。</p>
-      <p>如你认为有特殊情况需要我们处理，可通过下方邮箱联系我们。</p>
+      <p>如你认为有特殊情况需要我们处理，请依据相关页面公布的流程提交申请。</p>
 
       <h2>六、未成年人保护</h2>
       <p>
@@ -77,11 +77,6 @@ export default function PrivacyPage() {
         本政策可能不时更新，更新后将在本页面公布并调整顶部的&ldquo;最近更新&rdquo;日期。
       </p>
 
-      <h2>八、联系我们</h2>
-      <p>
-        如对本政策有任何疑问或建议，请联系：
-        <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>
-      </p>
     </LegalLayout>
   );
 }

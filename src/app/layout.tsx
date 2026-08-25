@@ -1,8 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WxAuthInit from "@/components/WxAuthInit";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -114,12 +111,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <WxAuthInit />
-        <div className="min-h-screen flex flex-col noise-overlay">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+        <main className="min-h-screen noise-overlay">{children}</main>
       </body>
     </html>
   );
