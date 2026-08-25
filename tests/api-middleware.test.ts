@@ -77,17 +77,17 @@ describe("api-middleware", () => {
     expect(parseSpy).not.toHaveBeenCalled();
   });
 
-  it("returns CORS header for allowed origin (*.shenzjd.com)", async () => {
+  it("returns CORS header for allowed origin (*.uuo.me)", async () => {
     vi.spyOn(apiUtils, "getCachedResponse").mockReturnValue(null);
     const parseSpy = vi.fn().mockResolvedValue({ code: 1, msg: "ok" });
     const handler = createApiHandler(parseSpy, { shouldCache: false });
 
     const req = new Request("http://127.0.0.1/api/test?url=https://example.com", {
-      headers: { Origin: "https://parse.shenzjd.com" },
+      headers: { Origin: "https://parse.uuo.me" },
     });
     const res = await handler(req);
 
-    expect(res.headers.get("Access-Control-Allow-Origin")).toBe("https://parse.shenzjd.com");
+    expect(res.headers.get("Access-Control-Allow-Origin")).toBe("https://parse.uuo.me");
   });
 
   it("does not return CORS header for unauthorized origin", async () => {

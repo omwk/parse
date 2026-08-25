@@ -90,7 +90,7 @@ export default function RootLayout({
     <html lang="zh-CN" className="scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/logo.jpg" />
+        <link rel="icon" href="/logo.png" />
         <link rel="apple-touch-icon" href="/icon-512.png" />
         <script
           type="application/ld+json"

@@ -2,7 +2,7 @@
 
 一个短视频解析服务，支持 24+ 平台的视频解析与下载。
 
-在线体验：<https://parse.shenzjd.com>
+在线体验：<https://parse.uuo.me>
 
 > 免责声明：本项目仅用于技术学习与搜索聚合演示，不存储、不传播任何受版权保护的内容。请勿用于商业或侵权用途。
 
@@ -24,11 +24,11 @@
 
 ### Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwu529778790%2Fparse.shenzjd.com&project-name=parse&repository-name=parse.shenzjd.com)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwu529778790%2Fparse.uuo.me&project-name=parse&repository-name=parse.uuo.me)
 
 ### Cloudflare（Workers / OpenNext）
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/wu529778790/parse.shenzjd.com)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/wu529778790/parse.uuo.me)
 
 点击上方按钮，按向导授权 GitHub 并确认后即可一键部署（Cloudflare 会自动克隆仓库到你的账户并配置 Workers Builds 自动 CI/CD；若向导未自动识别构建命令，请填 `npm run build:cf`）。
 
@@ -39,7 +39,7 @@
 **首次配置（一次性，约 5 分钟）**：
 
 1. 打开 Cloudflare Dashboard → **Workers & Pages** → **Create** → **Worker** → 选择 **Import a repository**（首次使用按引导授权 GitHub）。
-2. 选择仓库 `wu529778790/parse.shenzjd.com`，进入构建设置，配置两个命令：
+2. 选择仓库 `wu529778790/parse.uuo.me`，进入构建设置，配置两个命令：
    - **Build command（构建命令）**：`npm run build:cf`
    - **Deploy command（部署命令）**：`npx wrangler deploy`
 3. 部署成功后，在 Worker 的 **Settings → Variables and Secrets → Secrets** 中添加（可选，用于提升解析成功率）：
@@ -67,12 +67,12 @@ npm test         # 单元测试
 
 ```bash
 # GHCR
-docker pull ghcr.io/wu529778790/parse.shenzjd.com:latest
-docker run --name parse -p 3000:3000 -d ghcr.io/wu529778790/parse.shenzjd.com:latest
+docker pull ghcr.io/wu529778790/parse.uuo.me:latest
+docker run --name parse -p 3000:3000 -d ghcr.io/wu529778790/parse.uuo.me:latest
 
 # Docker Hub
-docker pull docker.io/wu529778790/parse.shenzjd.com:latest
-docker run --name parse -p 3000:3000 -d docker.io/wu529778790/parse.shenzjd.com:latest
+docker pull docker.io/wu529778790/parse.uuo.me:latest
+docker run --name parse -p 3000:3000 -d docker.io/wu529778790/parse.uuo.me:latest
 ```
 
 ## 测试

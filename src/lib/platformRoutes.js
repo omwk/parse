@@ -45,7 +45,7 @@ export async function getPlatformParser(platform) {
       const routeParser = async (url) => {
         const request = new Request(
           `http://internal.local/api/parser?url=${encodeURIComponent(url)}`,
-          { headers: { "user-agent": "parse.shenzjd.com/internal-parser", "x-parse-internal": "1" } }
+          { headers: { "user-agent": "parse.uuo.me/internal-parser", "x-parse-internal": "1" } }
         );
         const response = await mod.GET(request);
         if (!(response instanceof Response)) {

@@ -4,7 +4,7 @@
 
 ## 基础信息
 
-- **Base URL**: `https://parse.shenzjd.com` 或本地 `http://localhost:3000`
+- **Base URL**: `https://parse.uuo.me` 或本地 `http://localhost:3000`
 - **响应格式**: JSON
 - **跨域支持**: 所有接口均支持 CORS
 
@@ -446,8 +446,8 @@ if (data.code === 200) {
 
 ```bash
 # 抖音解析
-curl "https://parse.shenzjd.com/api/douyin?url=https://v.douyin.com/xxx/"
+curl "https://parse.uuo.me/api/douyin?url=https://v.douyin.com/xxx/"
 
 # 健康检查
-curl "https://parse.shenzjd.com/api/health"
+curl "https://parse.uuo.me/api/health"
 ```

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://parse.shenzjd.com/sitemap.xml
+Sitemap: https://parse.uuo.me/sitemap.xml

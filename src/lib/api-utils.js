@@ -201,14 +201,14 @@ export const getClientIP = (request) => {
          'unknown';
 };
 
-// CORS 头生成 — 仅允许 *.shenzjd.com
-const ALLOWED_ORIGIN_SUFFIX = '.shenzjd.com';
+// CORS 头生成 — 仅允许 *.uuo.me
+const ALLOWED_ORIGIN_SUFFIX = '.uuo.me';
 
 export const getCorsHeaders = (origin) => {
   if (!origin || typeof origin !== 'string') return {};
   try {
     const hostname = new URL(origin).hostname.toLowerCase();
-    if (hostname === 'shenzjd.com' || hostname.endsWith(ALLOWED_ORIGIN_SUFFIX)) {
+    if (hostname === 'uuo.me' || hostname.endsWith(ALLOWED_ORIGIN_SUFFIX)) {
       return { 'Access-Control-Allow-Origin': origin };
     }
   } catch {
