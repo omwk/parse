@@ -44,15 +44,8 @@ export default function DmcaPage() {
         </li>
       </ol>
 
-      <h2>三、联系方式</h2>
-      <p>请将完整的权利通知发送至：</p>
-      <p>
-        <strong>邮箱：</strong>
-        <a href={`mailto:${siteConfig.copyrightEmail}`}>
-          {siteConfig.copyrightEmail}
-        </a>
-      </p>
-      <p>我们收到符合要求的通知后，会在合理期限内处理并回复。</p>
+      <h2>三、通知处理</h2>
+      <p>请按上述要求准备完整的权利通知。我们收到符合要求的通知后，会在合理期限内处理并回复。</p>
 
       <h2>四、处理说明</h2>
       <ul>
@@ -64,7 +57,7 @@ export default function DmcaPage() {
       <h2>五、反通知</h2>
       <p>
         若你是被投诉内容的发布者或认为处理有误，可在收到处理通知后，
-        通过上述邮箱提交反通知并说明理由。我们将在核实后酌情恢复或维持处理结果。
+        按照上述投诉流程提交反通知并说明理由。我们将在核实后酌情恢复或维持处理结果。
       </p>
 
       <h2>六、温馨提示</h2>

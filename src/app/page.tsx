@@ -1,7 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import FloatingQR from "@wu529778790/floating-qr";
-import "@wu529778790/floating-qr/style.css";
 import VideoParserForm from "@/components/VideoParserForm";
 import {
   BilibiliVideo,
@@ -16,7 +14,6 @@ import {
 } from "@/components/videos";
 import { ApiResponse } from "@/types/api";
 import { VIDEO_PLATFORMS } from "@/config/video-platforms";
-import { siteConfig } from "@/config/site";
 
 // 平台名称单一数据源：从配置读取，避免与代码脱节（之前 README/SEO 只列了 7 个，实际 24 个）
 const PLATFORM_NAMES = Object.values(VIDEO_PLATFORMS).map((p) => p.name);
@@ -57,15 +54,6 @@ export default function Home() {
     setMounted(true);
   }, []);
 
-  // 右侧悬浮公众号+赞赏码浮窗：由 @wu529778790/floating-qr 提供
-  // 全部走包默认值（标题/文案/二维码图都是为本站预设的），不传自定义文案
-  useEffect(() => {
-    const fq = new FloatingQR({
-      position: "right-center",
-    });
-    return () => fq?.destroy();
-  }, []);
-
   const handleParseResult = (
     data: ApiResponse | null,
     errorMsg: string = ""
@@ -90,7 +78,7 @@ export default function Home() {
           <header className="text-center mb-8 reveal">
             {/* Title */}
             <h1 className="text-3xl sm:text-4xl font-bold mb-2 glow-text">
-              <span className="gradient-text">神族九帝</span>
+              <span className="gradient-text">视频解析</span>
             </h1>
 
             {/* Subtitle */}
@@ -123,7 +111,7 @@ export default function Home() {
             ))}
           </nav>
 
-          {/* Body: Form/Results（公众号浮窗挪到 body 末尾做 fixed，不挤压主结构） */}
+          {/* Body: parser form and result display */}
           <div className="max-w-3xl mx-auto">
             <div className={`reveal reveal-delay-2 ${mounted ? "opacity-100" : "opacity-0"}`}>
               <VideoParserForm
@@ -156,8 +144,7 @@ export default function Home() {
                         <h3 className="font-semibold text-red-400 mb-1">解析失败</h3>
                         <p className="text-sm text-red-300/80">{error}</p>
                         <p className="text-xs text-muted mt-3 leading-relaxed">
-                          遇到问题？关注公众号「神族九帝」并给公众号发消息，
-                          向站长反馈失败链接，我们会尽快排查处理。
+                          请检查链接是否有效，或稍后重试。
                         </p>
                       </div>
                       <button
@@ -237,7 +224,7 @@ export default function Home() {
                 name: "短视频怎么去水印下载？",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "复制视频分享链接或完整分享文案，粘贴到神族九帝输入框，点击解析即可获得无水印视频下载地址，全程免费在线使用，无需安装软件。",
+                  text: "复制视频分享链接或完整分享文案，粘贴到本站输入框，点击解析即可获得无水印视频下载地址，全程免费在线使用，无需安装软件。",
                 },
               },
               {
@@ -253,7 +240,7 @@ export default function Home() {
                 name: "解析失败怎么办？",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: `部分视频受平台风控或地区限制可能暂时无法解析，可更换网络环境后重试；如仍失败，关注公众号「${siteConfig.name}」并反馈链接，站长会协助排查。`,
+                  text: "部分视频受平台风控或地区限制可能暂时无法解析，可更换网络环境后重试。",
                 },
               },
             ],

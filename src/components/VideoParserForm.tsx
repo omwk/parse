@@ -10,7 +10,6 @@ import {
   detectPlatform,
   hasValidVideoUrl,
 } from "@/utils/share";
-import { showWxAuth } from "@/components/WxAuthInit";
 
 interface VideoParserFormProps {
   onResult: (data: ApiResponse | null, errorMsg: string) => void;
@@ -116,10 +115,6 @@ export default function VideoParserForm({
   const parseVideo = useCallback(
     async (url: string, platform: string, retryCount = 0) => {
       if (!url) return;
-
-      // 微信强制关注：每次发起解析都弹出（不可关闭），关注验证通过后才继续解析
-      const authed = await showWxAuth();
-      if (!authed) return; // 未完成关注则不发起解析（required=true 下理论上无法跳过）
 
       const cacheKey = `${platform}:${url}`;
 

@@ -82,11 +82,6 @@ export default function TermsPage() {
         继续使用本服务即视为你接受更新后的协议。
       </p>
 
-      <h2>九、联系我们</h2>
-      <p>
-        如对本协议有任何疑问，请通过邮箱联系：
-        <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>
-      </p>
     </LegalLayout>
   );
 }
